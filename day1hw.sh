@@ -16,7 +16,7 @@ if [ -f "$myfilename" ]; then
   numlines=$(wc -l < "$myfilename")
   echo "Number of lines: $numlines"
 
-  numchars=$(wc -m < "$myfilename")
+  numchars=$(wc -m < "$myfilename" | cut -d' ' -f1)
   echo "Number of characters: $numchars"
 
   numATATATAT=$(grep -c "ATATATAT" "$myfilename")
